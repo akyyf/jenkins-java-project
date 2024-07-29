@@ -7,7 +7,11 @@
 	<version>1.2.2</version>
 	<name>Java Home myweb</name>
 	<url>http://maven.apache.org</url>
-	
+	  <properties>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+
 	<properties>
 		<docker.image.prefix>kammana</docker.image.prefix>
 	</properties>	
@@ -16,17 +20,7 @@
 		    <groupId>com.oracle.bedrock</groupId>
 		    <artifactId>bedrock-runtime-maven</artifactId>
 		    <version>5.1.2</version>
-		</dependency>
-		<configuration>
-					<!-- Configuration needed to avoid build errors-->
-					<compilerArgs>
-						<args>-parameters</args>
-					</compilerArgs>
-					<source>1.8</source>
-					<target>1.8</target>
-					<!-- Configuration needed to avoid build errors-->
-				</configuration>
-		<dependency>
+			
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>3.8.1</version>
